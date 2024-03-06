@@ -21,9 +21,9 @@ import React, {useState} from 'react';
 const Weather = () => {
 	const [search, setSearch] = useState(null);
 	const [weather, setWeather] = useState({});
-
+console.log(process.env.REACT_APP_API_KEY);
 	const api = {
-	  key: "f8aadc312363abb110fa0a54263bc88d",
+		key: process.env.REACT_APP_API_KEY,
 	  base: "https://api.openweathermap.org/data/2.5/",
 	};
 	async function searchWeather() {
